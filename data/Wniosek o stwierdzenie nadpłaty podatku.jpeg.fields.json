@@ -1,0 +1,466 @@
+{
+  "source": "5. Wniosek o stwierdzenie nadpłaty podatku - materiał referencyjny dla Uczestników do zadania\\Wniosek o stwierdzenie nadpłaty podatku.jpeg",
+  "title": "Urząd Gminy",
+  "addressee": "Urząd Gminy Ulan-Majorat",
+  "pages": 1,
+  "text_source": [
+    "ocr:tesseract",
+    "vlm"
+  ],
+  "entities": {
+    "company": true,
+    "proxy": false
+  },
+  "sections": [],
+  "vlm": {
+    "model": "qwen3-vl:8b-instruct",
+    "raw": [
+      {
+        "page": 0,
+        "tile": 0,
+        "response": {
+          "title": "Wniosek o stwierdzenie nadpłaty podatku",
+          "fields": [
+            {
+              "label": "Miejscowość i data wypełnienia",
+              "type": "date",
+              "role": "place_date",
+              "section": "Nagłówek",
+              "required": true
+            },
+            {
+              "label": "Nazwisko i imię/Nazwa firmy",
+              "type": "string",
+              "role": "applicant_name",
+              "section": "Dane wnioskodawcy",
+              "required": true
+            },
+            {
+              "label": "Adres zamieszkania/siedziba firmy",
+              "type": "address",
+              "role": "applicant_address",
+              "section": "Dane wnioskodawcy",
+              "required": true,
+              "address_part": "full"
+            },
+            {
+              "label": "PESEL",
+              "type": "pesel",
+              "role": "applicant_id",
+              "section": "Dane wnioskodawcy",
+              "required": true
+            },
+            {
+              "label": "NIP",
+              "type": "nip",
+              "role": "applicant_id",
+              "section": "Dane wnioskodawcy",
+              "required": true
+            },
+            {
+              "label": "Tytuł nadpłaty",
+              "type": "string",
+              "role": "subject",
+              "section": "Dane nadpłaty",
+              "required": true
+            },
+            {
+              "label": "Kwota nadpłaty",
+              "type": "number",
+              "role": "subject",
+              "section": "Dane nadpłaty",
+              "required": true
+            },
+            {
+              "label": "Rodzaj podatku",
+              "type": "string",
+              "role": "subject",
+              "section": "Dane nadpłaty",
+              "required": true
+            },
+            {
+              "label": "Uzasadnienie",
+              "type": "textarea",
+              "role": "statement",
+              "section": "Uzasadnienie",
+              "required": true
+            },
+            {
+              "label": "Sposób rozliczenia nadpłaty",
+              "type": "radio",
+              "role": "contact",
+              "section": "Sposób rozliczenia",
+              "required": true,
+              "options": [
+                "zaliczyć na poczet przyszłego zobowiązania podatkowego z tytułu",
+                "zwrócić przelewem na wskazany rachunek"
+              ]
+            },
+            {
+              "label": "Numer rachunku",
+              "type": "string",
+              "role": "contact",
+              "section": "Sposób rozliczenia",
+              "required": false,
+              "depends_on": "Sposób rozliczenia nadpłaty",
+              "depends_value": "zwrócić przelewem na wskazany rachunek"
+            },
+            {
+              "label": "Podpis wnioskodawcy lub osoby upoważnionej",
+              "type": "signature",
+              "role": "signature",
+              "section": "Podpis",
+              "required": true
+            },
+            {
+              "label": "Załącznik 1",
+              "type": "file",
+              "role": "attachment",
+              "section": "Załączniki",
+              "required": true,
+              "depends_on": "Załączniki",
+              "depends_value": "korekta deklaracji"
+            },
+            {
+              "label": "Załącznik 2",
+              "type": "file",
+              "role": "attachment",
+              "section": "Załączniki",
+              "required": false,
+              "depends_on": "Załączniki",
+              "depends_value": "inne"
+            },
+            {
+              "label": "Załącznik 3",
+              "type": "file",
+              "role": "attachment",
+              "section": "Załączniki",
+              "required": false,
+              "depends_on": "Załączniki",
+              "depends_value": "inne"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "fields": [
+    {
+      "label": "Miejscowość i data wypełnienia",
+      "type": "date",
+      "section": "Nagłówek",
+      "page": 0,
+      "detector": "vlm",
+      "confidence": 0.8,
+      "role": "place_date",
+      "required": true
+    },
+    {
+      "label": "Nazwisko i imię/Nazwa firmy",
+      "type": "string",
+      "section": "Dane wnioskodawcy",
+      "page": 0,
+      "detector": "vlm",
+      "confidence": 0.8,
+      "role": "applicant_name",
+      "required": true
+    },
+    {
+      "label": "Adres zamieszkania/siedziba firmy",
+      "type": "address",
+      "section": "Dane wnioskodawcy",
+      "page": 0,
+      "address_part": "full",
+      "detector": "vlm",
+      "confidence": 0.8,
+      "role": "applicant_address",
+      "required": true
+    },
+    {
+      "label": "PESEL",
+      "type": "pesel",
+      "section": "Dane wnioskodawcy",
+      "page": 0,
+      "bbox": [
+        172,
+        346,
+        205,
+        353
+      ],
+      "label_bbox": [
+        91,
+        337,
+        159,
+        354
+      ],
+      "detector": "dots+vlm",
+      "confidence": 0.95,
+      "role": "applicant_id",
+      "required": true
+    },
+    {
+      "label": "NIP",
+      "type": "nip",
+      "section": "Dane wnioskodawcy",
+      "page": 0,
+      "bbox": [
+        148,
+        395,
+        192,
+        403
+      ],
+      "label_bbox": [
+        91,
+        386,
+        139,
+        403
+      ],
+      "detector": "dots+vlm",
+      "confidence": 0.95,
+      "role": "applicant_id",
+      "required": true
+    },
+    {
+      "label": "Tytuł nadpłaty",
+      "type": "string",
+      "section": "Dane nadpłaty",
+      "page": 0,
+      "detector": "vlm",
+      "confidence": 0.8,
+      "role": "subject",
+      "required": true
+    },
+    {
+      "label": "Kwota nadpłaty",
+      "type": "number",
+      "section": "Dane nadpłaty",
+      "page": 0,
+      "detector": "vlm",
+      "confidence": 0.8,
+      "role": "subject",
+      "required": true
+    },
+    {
+      "label": "Rodzaj podatku",
+      "type": "string",
+      "section": "Dane nadpłaty",
+      "page": 0,
+      "detector": "vlm",
+      "confidence": 0.8,
+      "role": "subject",
+      "required": true
+    },
+    {
+      "label": "Uzasadnienie",
+      "type": "textarea",
+      "section": "Uzasadnienie",
+      "page": 0,
+      "detector": "vlm",
+      "confidence": 0.8,
+      "role": "subject",
+      "required": true
+    },
+    {
+      "label": "Sposób rozliczenia nadpłaty",
+      "type": "radio",
+      "section": "Sposób rozliczenia",
+      "page": 0,
+      "options": [
+        "zaliczyć na poczet przyszłego zobowiązania podatkowego z tytułu",
+        "zwrócić przelewem na wskazany rachunek"
+      ],
+      "detector": "vlm",
+      "confidence": 0.8,
+      "role": "subject",
+      "required": true
+    },
+    {
+      "label": "Numer rachunku",
+      "type": "iban",
+      "section": "Sposób rozliczenia",
+      "page": 0,
+      "detector": "vlm",
+      "confidence": 0.8,
+      "role": "subject",
+      "required": true,
+      "depends_on": "Sposób rozliczenia nadpłaty",
+      "depends_value": "zwrócić przelewem na wskazany rachunek"
+    },
+    {
+      "label": "Podpis wnioskodawcy lub osoby upoważnionej",
+      "type": "signature",
+      "section": "Podpis",
+      "page": 0,
+      "detector": "vlm",
+      "confidence": 0.8,
+      "role": "signature",
+      "required": true
+    },
+    {
+      "label": "Załącznik 1",
+      "type": "file",
+      "section": "Załączniki",
+      "page": 0,
+      "detector": "vlm",
+      "confidence": 0.8,
+      "role": "attachment",
+      "required": true,
+      "depends_on": "Załączniki",
+      "depends_value": "korekta deklaracji"
+    },
+    {
+      "label": "Załącznik 2",
+      "type": "file",
+      "section": "Załączniki",
+      "page": 0,
+      "detector": "vlm",
+      "confidence": 0.8,
+      "role": "attachment",
+      "required": true,
+      "depends_on": "Załączniki",
+      "depends_value": "inne"
+    },
+    {
+      "label": "Załącznik 3",
+      "type": "file",
+      "section": "Załączniki",
+      "page": 0,
+      "detector": "vlm",
+      "confidence": 0.8,
+      "role": "attachment",
+      "required": true,
+      "depends_on": "Załączniki",
+      "depends_value": "inne"
+    }
+  ],
+  "simple": [
+    {
+      "Opis pola": "Miejscowość i data wypełnienia",
+      "Rodzaj pola": "date",
+      "Rodzaj szczegółowy": "date",
+      "Rola": "place_date",
+      "Wymagane": true,
+      "Sekcja": "Nagłówek"
+    },
+    {
+      "Opis pola": "Nazwisko i imię/Nazwa firmy",
+      "Rodzaj pola": "string",
+      "Rodzaj szczegółowy": "string",
+      "Rola": "applicant_name",
+      "Wymagane": true,
+      "Sekcja": "Dane wnioskodawcy"
+    },
+    {
+      "Opis pola": "Adres zamieszkania/siedziba firmy",
+      "Rodzaj pola": "address",
+      "Rodzaj szczegółowy": "address",
+      "Rola": "applicant_address",
+      "Wymagane": true,
+      "Sekcja": "Dane wnioskodawcy"
+    },
+    {
+      "Opis pola": "PESEL",
+      "Rodzaj pola": "number",
+      "Rodzaj szczegółowy": "pesel",
+      "Rola": "applicant_id",
+      "Wymagane": true,
+      "Sekcja": "Dane wnioskodawcy"
+    },
+    {
+      "Opis pola": "NIP",
+      "Rodzaj pola": "number",
+      "Rodzaj szczegółowy": "nip",
+      "Rola": "applicant_id",
+      "Wymagane": true,
+      "Sekcja": "Dane wnioskodawcy"
+    },
+    {
+      "Opis pola": "Tytuł nadpłaty",
+      "Rodzaj pola": "string",
+      "Rodzaj szczegółowy": "string",
+      "Rola": "subject",
+      "Wymagane": true,
+      "Sekcja": "Dane nadpłaty"
+    },
+    {
+      "Opis pola": "Kwota nadpłaty",
+      "Rodzaj pola": "number",
+      "Rodzaj szczegółowy": "number",
+      "Rola": "subject",
+      "Wymagane": true,
+      "Sekcja": "Dane nadpłaty"
+    },
+    {
+      "Opis pola": "Rodzaj podatku",
+      "Rodzaj pola": "string",
+      "Rodzaj szczegółowy": "string",
+      "Rola": "subject",
+      "Wymagane": true,
+      "Sekcja": "Dane nadpłaty"
+    },
+    {
+      "Opis pola": "Uzasadnienie",
+      "Rodzaj pola": "string",
+      "Rodzaj szczegółowy": "textarea",
+      "Rola": "subject",
+      "Wymagane": true,
+      "Sekcja": "Uzasadnienie"
+    },
+    {
+      "Opis pola": "Sposób rozliczenia nadpłaty",
+      "Rodzaj pola": "checkbox",
+      "Rodzaj szczegółowy": "radio",
+      "Rola": "subject",
+      "Wymagane": true,
+      "Opcje": [
+        "zaliczyć na poczet przyszłego zobowiązania podatkowego z tytułu",
+        "zwrócić przelewem na wskazany rachunek"
+      ],
+      "Sekcja": "Sposób rozliczenia"
+    },
+    {
+      "Opis pola": "Numer rachunku",
+      "Rodzaj pola": "number",
+      "Rodzaj szczegółowy": "iban",
+      "Rola": "subject",
+      "Wymagane": true,
+      "Zależy od": "Sposób rozliczenia nadpłaty = zwrócić przelewem na wskazany rachunek",
+      "Sekcja": "Sposób rozliczenia"
+    },
+    {
+      "Opis pola": "Podpis wnioskodawcy lub osoby upoważnionej",
+      "Rodzaj pola": "string",
+      "Rodzaj szczegółowy": "signature",
+      "Rola": "signature",
+      "Wymagane": true,
+      "Sekcja": "Podpis"
+    },
+    {
+      "Opis pola": "Załącznik 1",
+      "Rodzaj pola": "checkbox",
+      "Rodzaj szczegółowy": "file",
+      "Rola": "attachment",
+      "Wymagane": true,
+      "Zależy od": "Załączniki = korekta deklaracji",
+      "Sekcja": "Załączniki"
+    },
+    {
+      "Opis pola": "Załącznik 2",
+      "Rodzaj pola": "checkbox",
+      "Rodzaj szczegółowy": "file",
+      "Rola": "attachment",
+      "Wymagane": true,
+      "Zależy od": "Załączniki = inne",
+      "Sekcja": "Załączniki"
+    },
+    {
+      "Opis pola": "Załącznik 3",
+      "Rodzaj pola": "checkbox",
+      "Rodzaj szczegółowy": "file",
+      "Rola": "attachment",
+      "Wymagane": true,
+      "Zależy od": "Załączniki = inne",
+      "Sekcja": "Załączniki"
+    }
+  ]
+}

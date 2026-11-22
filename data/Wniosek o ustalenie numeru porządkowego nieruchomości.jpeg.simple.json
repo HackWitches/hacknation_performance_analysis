@@ -1,0 +1,77 @@
+{
+  "title": "Wniosek o ustalenie numeru porządkowego nieruchomości",
+  "pola": [
+    {
+      "Opis pola": "Data",
+      "Rodzaj pola": "date",
+      "Rodzaj szczegółowy": "date",
+      "Rola": "place_date",
+      "Wymagane": false,
+      "Sekcja": "Dane wnioskodawcy"
+    },
+    {
+      "Opis pola": "Imię i nazwisko/nazwa wnioskodawcy",
+      "Rodzaj pola": "string",
+      "Rodzaj szczegółowy": "string",
+      "Rola": "applicant_name",
+      "Wymagane": true,
+      "Sekcja": "Dane wnioskodawcy"
+    },
+    {
+      "Opis pola": "Adres",
+      "Rodzaj pola": "address",
+      "Rodzaj szczegółowy": "address",
+      "Rola": "applicant_address",
+      "Wymagane": true,
+      "Sekcja": "Dane wnioskodawcy"
+    },
+    {
+      "Opis pola": "Numer telefonu/adres e-mail",
+      "Rodzaj pola": "email",
+      "Rodzaj szczegółowy": "email",
+      "Rola": "contact",
+      "Wymagane": false,
+      "Sekcja": "Dane wnioskodawcy"
+    },
+    {
+      "Opis pola": "Miejscowość",
+      "Rodzaj pola": "address",
+      "Rodzaj szczegółowy": "address",
+      "Rola": "subject",
+      "Wymagane": true,
+      "Sekcja": "Dane nieruchomości"
+    },
+    {
+      "Opis pola": "Ulica",
+      "Rodzaj pola": "address",
+      "Rodzaj szczegółowy": "address",
+      "Rola": "subject",
+      "Wymagane": true,
+      "Sekcja": "Dane nieruchomości"
+    },
+    {
+      "Opis pola": "Numer ewidencyjny działki",
+      "Rodzaj pola": "string",
+      "Rodzaj szczegółowy": "string",
+      "Rola": "subject",
+      "Wymagane": true,
+      "Sekcja": "Dane nieruchomości"
+    },
+    {
+      "Opis pola": "Obręb",
+      "Rodzaj pola": "string",
+      "Rodzaj szczegółowy": "string",
+      "Rola": "subject",
+      "Wymagane": true,
+      "Sekcja": "Dane nieruchomości"
+    },
+    {
+      "Opis pola": "Podpis wnioskodawcy",
+      "Rodzaj pola": "string",
+      "Rodzaj szczegółowy": "signature",
+      "Rola": "signature",
+      "Wymagane": true,
+      "Sekcja": "Podpis"
+    }
+  ]
+}

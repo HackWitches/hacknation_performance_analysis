@@ -1,0 +1,133 @@
+{
+  "title": "Wniosek o stwierdzenie nadpłaty podatku",
+  "pola": [
+    {
+      "Opis pola": "Miejscowość i data wypełnienia",
+      "Rodzaj pola": "date",
+      "Rodzaj szczegółowy": "date",
+      "Rola": "place_date",
+      "Wymagane": false,
+      "Sekcja": "Nagłówek"
+    },
+    {
+      "Opis pola": "Nazwisko i imię/Nazwa firmy",
+      "Rodzaj pola": "string",
+      "Rodzaj szczegółowy": "string",
+      "Rola": "applicant_name",
+      "Wymagane": true,
+      "Sekcja": "Dane wnioskodawcy"
+    },
+    {
+      "Opis pola": "Adres zamieszkania/siedziba firmy",
+      "Rodzaj pola": "address",
+      "Rodzaj szczegółowy": "address",
+      "Rola": "applicant_address",
+      "Wymagane": true,
+      "Sekcja": "Dane wnioskodawcy"
+    },
+    {
+      "Opis pola": "PESEL",
+      "Rodzaj pola": "number",
+      "Rodzaj szczegółowy": "pesel",
+      "Rola": "applicant_id",
+      "Wymagane": true,
+      "Sekcja": "Dane wnioskodawcy"
+    },
+    {
+      "Opis pola": "NIP",
+      "Rodzaj pola": "number",
+      "Rodzaj szczegółowy": "nip",
+      "Rola": "applicant_id",
+      "Wymagane": true,
+      "Sekcja": "Dane wnioskodawcy"
+    },
+    {
+      "Opis pola": "Tytuł nadpłaty",
+      "Rodzaj pola": "string",
+      "Rodzaj szczegółowy": "string",
+      "Rola": "subject",
+      "Wymagane": true,
+      "Sekcja": "Dane nadpłaty"
+    },
+    {
+      "Opis pola": "Kwota nadpłaty",
+      "Rodzaj pola": "number",
+      "Rodzaj szczegółowy": "number",
+      "Rola": "subject",
+      "Wymagane": true,
+      "Sekcja": "Dane nadpłaty"
+    },
+    {
+      "Opis pola": "Rodzaj podatku",
+      "Rodzaj pola": "string",
+      "Rodzaj szczegółowy": "string",
+      "Rola": "subject",
+      "Wymagane": true,
+      "Sekcja": "Dane nadpłaty"
+    },
+    {
+      "Opis pola": "Uzasadnienie",
+      "Rodzaj pola": "string",
+      "Rodzaj szczegółowy": "textarea",
+      "Rola": "subject",
+      "Wymagane": true,
+      "Sekcja": "Uzasadnienie"
+    },
+    {
+      "Opis pola": "Sposób rozliczenia nadpłaty",
+      "Rodzaj pola": "checkbox",
+      "Rodzaj szczegółowy": "radio",
+      "Rola": "subject",
+      "Wymagane": true,
+      "Opcje": [
+        "zaliczyć na poczet przyszłego zobowiązania podatkowego z tytułu",
+        "zwrócić przelewem na wskazany rachunek"
+      ],
+      "Sekcja": "Sposób rozliczenia"
+    },
+    {
+      "Opis pola": "Numer rachunku",
+      "Rodzaj pola": "number",
+      "Rodzaj szczegółowy": "iban",
+      "Rola": "subject",
+      "Wymagane": true,
+      "Zależy od": "Sposób rozliczenia nadpłaty = zwrócić przelewem na wskazany rachunek",
+      "Sekcja": "Sposób rozliczenia"
+    },
+    {
+      "Opis pola": "Podpis wnioskodawcy lub osoby upoważnionej",
+      "Rodzaj pola": "string",
+      "Rodzaj szczegółowy": "signature",
+      "Rola": "signature",
+      "Wymagane": true,
+      "Sekcja": "Podpis"
+    },
+    {
+      "Opis pola": "Załącznik 1",
+      "Rodzaj pola": "checkbox",
+      "Rodzaj szczegółowy": "file",
+      "Rola": "attachment",
+      "Wymagane": true,
+      "Zależy od": "Załączniki = korekta deklaracji",
+      "Sekcja": "Załączniki"
+    },
+    {
+      "Opis pola": "Załącznik 2",
+      "Rodzaj pola": "checkbox",
+      "Rodzaj szczegółowy": "file",
+      "Rola": "attachment",
+      "Wymagane": true,
+      "Zależy od": "Załączniki = inne",
+      "Sekcja": "Załączniki"
+    },
+    {
+      "Opis pola": "Załącznik 3",
+      "Rodzaj pola": "checkbox",
+      "Rodzaj szczegółowy": "file",
+      "Rola": "attachment",
+      "Wymagane": true,
+      "Zależy od": "Załączniki = inne",
+      "Sekcja": "Załączniki"
+    }
+  ]
+}

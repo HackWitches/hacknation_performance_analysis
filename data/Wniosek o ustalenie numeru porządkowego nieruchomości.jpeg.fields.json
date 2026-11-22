@@ -1,0 +1,342 @@
+{
+  "source": "1. Wniosek o ustalenie numeru porządkowego nieruchomości - materiał referencyjny dla Uczestników do zadania\\Wniosek o ustalenie numeru porządkowego nieruchomości.jpeg",
+  "title": "Wniosek o ustalenie numeru porządkowego nieruchomości",
+  "addressee": "Wójt Gminy Elbląg",
+  "pages": 2,
+  "text_source": [
+    "ocr:tesseract",
+    "vlm"
+  ],
+  "entities": {
+    "company": true,
+    "proxy": false
+  },
+  "sections": [],
+  "vlm": {
+    "model": "qwen3-vl:8b-instruct",
+    "raw": [
+      {
+        "page": 0,
+        "tile": 0,
+        "response": {
+          "title": "Wniosek o ustalenie numeru porządkowego nieruchomości",
+          "fields": [
+            {
+              "label": "Data",
+              "type": "date",
+              "role": "place_date",
+              "section": "Dane wnioskodawcy",
+              "required": false
+            },
+            {
+              "label": "Imię i nazwisko/nazwa wnioskodawcy",
+              "type": "string",
+              "role": "applicant_name",
+              "section": "Dane wnioskodawcy",
+              "required": true
+            },
+            {
+              "label": "Adres",
+              "type": "address",
+              "role": "applicant_address",
+              "section": "Dane wnioskodawcy",
+              "required": true,
+              "address_part": "full"
+            },
+            {
+              "label": "Numer telefonu/adres e-mail",
+              "type": "email",
+              "role": "contact",
+              "section": "Dane wnioskodawcy",
+              "required": false
+            },
+            {
+              "label": "Miejscowość",
+              "type": "string",
+              "role": "subject",
+              "section": "Dane nieruchomości",
+              "required": true
+            },
+            {
+              "label": "Ulica",
+              "type": "string",
+              "role": "subject",
+              "section": "Dane nieruchomości",
+              "required": true
+            },
+            {
+              "label": "Numer ewidencyjny działki",
+              "type": "string",
+              "role": "subject",
+              "section": "Dane nieruchomości",
+              "required": true
+            },
+            {
+              "label": "Obręb",
+              "type": "string",
+              "role": "subject",
+              "section": "Dane nieruchomości",
+              "required": true
+            },
+            {
+              "label": "Podpis wnioskodawcy",
+              "type": "signature",
+              "role": "signature",
+              "section": "Podpis",
+              "required": true
+            }
+          ]
+        }
+      },
+      {
+        "page": 1,
+        "tile": 0,
+        "response": {
+          "title": "Wniosek o ustalenie numeru porządkowego nieruchomości",
+          "fields": []
+        }
+      }
+    ]
+  },
+  "fields": [
+    {
+      "label": "Data",
+      "type": "date",
+      "section": "Dane wnioskodawcy",
+      "page": 0,
+      "bbox": [
+        1062,
+        183,
+        1451,
+        216
+      ],
+      "label_bbox": [
+        1229,
+        231,
+        1291,
+        255
+      ],
+      "detector": "dots+vlm",
+      "confidence": 0.95,
+      "role": "place_date",
+      "required": false
+    },
+    {
+      "label": "Imię i nazwisko/nazwa wnioskodawcy",
+      "type": "string",
+      "section": "Dane wnioskodawcy",
+      "page": 0,
+      "bbox": [
+        202,
+        385,
+        634,
+        418
+      ],
+      "label_bbox": [
+        198,
+        438,
+        642,
+        463
+      ],
+      "detector": "dots+vlm",
+      "confidence": 0.95,
+      "role": "applicant_name",
+      "required": true
+    },
+    {
+      "label": "Adres",
+      "type": "address",
+      "section": "Dane wnioskodawcy",
+      "page": 0,
+      "bbox": [
+        202,
+        552,
+        634,
+        585
+      ],
+      "label_bbox": [
+        237,
+        600,
+        312,
+        625
+      ],
+      "address_part": "full",
+      "detector": "dots+vlm",
+      "confidence": 0.95,
+      "role": "applicant_address",
+      "required": true
+    },
+    {
+      "label": "Numer telefonu/adres e-mail",
+      "type": "email",
+      "section": "Dane wnioskodawcy",
+      "page": 0,
+      "detector": "vlm",
+      "confidence": 0.8,
+      "role": "contact",
+      "required": false
+    },
+    {
+      "label": "Miejscowość",
+      "type": "address",
+      "section": "Dane nieruchomości",
+      "page": 0,
+      "bbox": [
+        414,
+        1101,
+        815,
+        1111
+      ],
+      "label_bbox": [
+        197,
+        1088,
+        409,
+        1118
+      ],
+      "address_part": "city",
+      "detector": "dots+vlm",
+      "confidence": 0.95,
+      "role": "subject",
+      "required": true
+    },
+    {
+      "label": "Ulica",
+      "type": "address",
+      "section": "Dane nieruchomości",
+      "page": 0,
+      "address_part": "street",
+      "detector": "vlm",
+      "confidence": 0.8,
+      "role": "subject",
+      "required": true
+    },
+    {
+      "label": "Numer ewidencyjny działki",
+      "type": "string",
+      "section": "Dane nieruchomości",
+      "page": 0,
+      "bbox": [
+        516,
+        1160,
+        672,
+        1193
+      ],
+      "label_bbox": [
+        197,
+        1168,
+        501,
+        1198
+      ],
+      "detector": "dots+vlm",
+      "confidence": 0.95,
+      "role": "subject",
+      "required": true
+    },
+    {
+      "label": "Obręb",
+      "type": "string",
+      "section": "Dane nieruchomości",
+      "page": 0,
+      "detector": "vlm",
+      "confidence": 0.8,
+      "role": "subject",
+      "required": true
+    },
+    {
+      "label": "Podpis wnioskodawcy",
+      "type": "signature",
+      "section": "Podpis",
+      "page": 0,
+      "bbox": [
+        1129,
+        1319,
+        1451,
+        1352
+      ],
+      "label_bbox": [
+        1160,
+        1380,
+        1439,
+        1408
+      ],
+      "detector": "dots+vlm",
+      "confidence": 0.95,
+      "role": "signature",
+      "required": true
+    }
+  ],
+  "simple": [
+    {
+      "Opis pola": "Data",
+      "Rodzaj pola": "date",
+      "Rodzaj szczegółowy": "date",
+      "Rola": "place_date",
+      "Wymagane": false,
+      "Sekcja": "Dane wnioskodawcy"
+    },
+    {
+      "Opis pola": "Imię i nazwisko/nazwa wnioskodawcy",
+      "Rodzaj pola": "string",
+      "Rodzaj szczegółowy": "string",
+      "Rola": "applicant_name",
+      "Wymagane": true,
+      "Sekcja": "Dane wnioskodawcy"
+    },
+    {
+      "Opis pola": "Adres",
+      "Rodzaj pola": "address",
+      "Rodzaj szczegółowy": "address",
+      "Rola": "applicant_address",
+      "Wymagane": true,
+      "Sekcja": "Dane wnioskodawcy"
+    },
+    {
+      "Opis pola": "Numer telefonu/adres e-mail",
+      "Rodzaj pola": "email",
+      "Rodzaj szczegółowy": "email",
+      "Rola": "contact",
+      "Wymagane": false,
+      "Sekcja": "Dane wnioskodawcy"
+    },
+    {
+      "Opis pola": "Miejscowość",
+      "Rodzaj pola": "address",
+      "Rodzaj szczegółowy": "address",
+      "Rola": "subject",
+      "Wymagane": true,
+      "Sekcja": "Dane nieruchomości"
+    },
+    {
+      "Opis pola": "Ulica",
+      "Rodzaj pola": "address",
+      "Rodzaj szczegółowy": "address",
+      "Rola": "subject",
+      "Wymagane": true,
+      "Sekcja": "Dane nieruchomości"
+    },
+    {
+      "Opis pola": "Numer ewidencyjny działki",
+      "Rodzaj pola": "string",
+      "Rodzaj szczegółowy": "string",
+      "Rola": "subject",
+      "Wymagane": true,
+      "Sekcja": "Dane nieruchomości"
+    },
+    {
+      "Opis pola": "Obręb",
+      "Rodzaj pola": "string",
+      "Rodzaj szczegółowy": "string",
+      "Rola": "subject",
+      "Wymagane": true,
+      "Sekcja": "Dane nieruchomości"
+    },
+    {
+      "Opis pola": "Podpis wnioskodawcy",
+      "Rodzaj pola": "string",
+      "Rodzaj szczegółowy": "signature",
+      "Rola": "signature",
+      "Wymagane": true,
+      "Sekcja": "Podpis"
+    }
+  ]
+}
